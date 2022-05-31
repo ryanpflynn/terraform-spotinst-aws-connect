@@ -1,7 +1,7 @@
 # Call Spot API to create the Spot Account
 resource "null_resource" "account" {
     triggers = {
-        cmd     = "${path.module}/scripts/spot-account-aws"
+        cmd     = "${path.module}/scripts/spot-account-aws-wrapper.sh"
         name    = local.name
         token   = var.spotinst_token
         random  = local.random
